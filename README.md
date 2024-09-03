@@ -3,7 +3,7 @@
 ## Overview
 
 The **Calorie Tracked** is a web application that helps users track the calories they burn during exercises. Utilizing the Nutritionix and Sheety APIs, this app allows users to input their exercise details and personal parameters (like weight, height, and age). The application then calculates the calories burned based on the provided input and automatically logs the data into a Google Sheets spreadsheet for easy tracking and management.
-<img src="images/CGIF.gif" alt="demo" width="400" height="380">
+<img src="images/CGIF.gif" alt="demo" width="400" height="300">
 
 ## Features
 
