@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calorie Tracker</title>
+    <style>
+        body {
+            font-family: Optima, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background: linear-gradient(#FFDF00, #F6D108, #EDC211); /* Light golden yellow gradient */
+        }
+
+        .container {
+            text-align: center;
+            background: linear-gradient(#691883, #b148d2, #FFDF00); /* Purple background for the card */
+            padding: 20px;
+            border-radius: 20px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        h1 {
+            color: #f5f5f5;
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+        }
+
+        p {
+            color: #f5f5f5;
+            font-size: 1rem;
+            margin-top: 10px;
+        }
+
+        form {
+            margin-top: 20px;
+        }
+
+        input[type="text"],
+        input[type="number"] {
+            width: 70%;
+            padding: 10px;
+            margin: 10px 0;
+            border-radius: 10px;
+            border: 2px solid transparent;
+            outline: none;
+            box-shadow: 0 0 5px rgba(255, 215, 0, 0.5); /* Golden hint */
+            transition: border-color 0.3s ease-in-out;
+        }
+
+        input[type="text"]:focus,
+        input[type="number"]:focus {
+            border-color: #ffd700; /* Golden border on focus */
+        }
+
+        input[type="submit"] {
+            background: linear-gradient(135deg, #28a745, #a8e063); /* Green gradient */
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 10px;
+            cursor: pointer;
+            font-size: 1rem;
+            transition: background 0.3s ease-in-out;
+        }
+
+        input[type="submit"]:hover {
+            background: linear-gradient(135deg, #45b649, #a8e063); /* Lighter green on hover */
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1 style="font-family: Helvetica;">Calorie Tracked😜</h1>
+        <form method="POST" action="/">
+            <input type="text" id="query" name="query" placeholder="Enter exercise (e.g., 20 min squats)" required><br>
+            <input type="number" step="0.1" id="weight_kg" name="weight_kg" placeholder="Enter weight (kg)" required><br>
+            <input type="number" step="0.1" id="height_cm" name="height_cm" placeholder="Enter height (cm)" required><br>
+            <input type="number" id="age" name="age" placeholder="Enter age" required><br>
+            <input type="submit" value="Submit">
+        </form>
+
+        {% if request.args.get('success') %}
+        <p style="color: green;">Data successfully submitted and stored in Google Sheets!</p>
+        {% endif %}
+
+        <p  style="color: black;">Created by Hirah</p>
+    </div>
+</body>
+</html>
+
