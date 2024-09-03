@@ -51,10 +51,4 @@ Flask is a lightweight web framework used to create the application's GUI. It ha
 - **API Requests**: The application sends the data to the Nutritionix API for calorie calculation.
 - **Data Storage**: The calorie data is then sent to Google Sheets using the Sheety API for tracking and analysis.
 
-## Contributing
 
-Feel free to contribute to this project by submitting pull requests or opening issues. Your feedback and improvements are welcome!
-
-## License
-
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
